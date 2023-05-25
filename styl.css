@@ -1,0 +1,89 @@
+:root{
+    --mainGreenClr: rgb(47, 76, 57);
+    --secondGreenClr: rgb(104, 171, 128);
+    --mainWhiteClr: rgb(250, 248, 246);
+    --secondWhiteClr: rgb(184, 199, 192);/*rgb(211, 211, 211)*/
+    --whiteShadowClr: rgb(188, 188, 188);
+    --endDivClr: rgba(225, 225, 225, 0);
+    --resetBtnClr: rgba(104, 171, 128, 0);
+}
+
+@font-face {
+    font-family: font;
+    src: url(font.ttf);
+  }
+
+body{
+    background-color: var(--mainGreenClr);
+    font-family: font;
+}
+
+div#board{
+    margin: auto;
+    width: 450px;
+    height: 450px;
+    background-color: var(--secondWhiteClr);
+    padding: 15px;
+    border-radius: 15px;
+    /* outline: solid 7px rgb(112, 183, 135); */
+}
+
+div.field{
+    background-color: var(--mainWhiteClr);
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 20px var(--whiteShadowClr);
+    border-radius: 10px;
+    text-align: center;
+    transition: .5s;
+}
+
+h1.questionMark{
+    color: var(--secondGreenClr);
+    text-align: center;
+    font-size: 60px;
+    line-height: 17px;
+}
+
+div.field img{
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+}
+
+img::selection, h1.questionMark::selection{
+    background-color: #0000;
+}
+
+div#endDiv{
+    width: 450px;
+    height: 450px;
+    background-color: var(--endDivClr);
+    top: -455px;    
+    margin-left: -15px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    z-index: -1;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    transition: 1.5s;
+}
+
+button#reset{
+    width: 120px;
+    height: 43px;
+    border-radius: 5px;
+    border: none;
+    /* border: solid 4px green; */
+    background-color: var(--resetBtnClr);
+    cursor: pointer;
+    transition: 1.5s;
+    font-size: 20px;
+    color: white;
+}
